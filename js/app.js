@@ -1,13 +1,15 @@
 
 const adviceId = document.querySelector('#adviceId'),
       adviceDescription = document.querySelector('#adviceDescription'),
-      btnAdvice = document.querySelector('#btnAdvice');
+      btnAdvice = document.querySelector('#btnAdvice'),
+      spinner = document.querySelector('#spinner');
 
 const initApp = () => {
   btnAdvice.addEventListener('click', () => {
     adviceId.textContent = '';
-    adviceDescription.textContent = 'Loading...';
+    adviceDescription.textContent = '';
     btnAdvice.disabled = true;
+    spinner.classList.remove('d-none');
     getAdvice();
   });
 }
@@ -30,4 +32,5 @@ const renderAdvice = ( data ) => {
   adviceId.textContent = `Advice #${id}`;
   adviceDescription.textContent = advice;
   btnAdvice.disabled = false;
+  spinner.classList.add('d-none');
 }
