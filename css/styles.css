@@ -97,6 +97,12 @@ h1 {
         -moz-box-shadow: -4px 0px 40px 0px var(--neon-green);
     }
 }
+.advice__container-dice:disabled {
+    background-color: #E1E1E1;
+    box-shadow: none;
+    cursor: no-drop;
+}
+
 .advice__icon-dice {
     width: 2.5rem;
 }
