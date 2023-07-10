@@ -5,27 +5,34 @@ const adviceId = document.querySelector('#adviceId'),
       spinner = document.querySelector('#spinner');
 
 const initApp = () => {
-  btnAdvice.addEventListener('click', () => {
+  btnAdvice.addEventListener('click', async () => {
     adviceId.textContent = '';
     adviceDescription.textContent = '';
     btnAdvice.disabled = true;
     spinner.classList.remove('d-none');
-    getAdvice();
+    
+    const data = await getAdvice();
+    renderAdvice(data.slip);
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  initApp();
-})
+document.addEventListener('DOMContentLoaded', initApp);
 
+/**
+ * Get random Advice
+ * @returns {Promise}
+ */
 const getAdvice = async () => {
   const url = 'https://api.adviceslip.com/advice';
   const response = await fetch(url);
   const data = await response.json();
-
-  renderAdvice(data.slip);
+  return data;
 }
 
+/**
+ * Render Advice in HTML
+ * @param {Promise} data 
+ */
 const renderAdvice = ( data ) => {
   const { id, advice } = data;
 
