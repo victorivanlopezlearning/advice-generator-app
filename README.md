@@ -31,7 +31,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io/victorivanlopezlearning](https://www.frontendmentor.io/profile/victorivanlopezlearning)
+- Solution URL: [frontendmentor.io/victorivanlopezlearning](https://www.frontendmentor.io/solutions/advice-generator-app-vanilla-css-javascript-api-QVboo_kp0v)
 - Live Site URL: [victorivanlopez/advice-generator-app/](https://victorivanlopezlearning.github.io/advice-generator-app/)
 
 ## My process
