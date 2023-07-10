@@ -16,12 +16,15 @@
 </head>
 <body>
   <main class="advice container">
-    <p>Advice #117</p>
-    <h1>"Sarcasm is the lowest form of wit. Employ correctly with apt timing"</h1>
-    <img src="./images/pattern-divider-desktop.svg" alt="pattern-divider">
-    <div>
-      <img src="./images/icon-dice.svg" alt="icon-dice">
-    </div>
+    <p class="advice__id">Advice #117</p>
+    <h1 class="advice__description">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</h1>
+    <picture>
+      <source media="(min-width: 768px)" srcset="./images/pattern-divider-desktop.svg">
+      <img class="advice__image" src="./images/pattern-divider-mobile.svg" alt="Icon pattern-divider">
+    </picture>
+    <button id="btnAdvice" type="button" class="advice__container-dice">
+      <img class="advice__icon-dice" src="./images/icon-dice.svg" alt="icon-dice">
+    </button>
   </main>
 
   <footer class="attribution">
